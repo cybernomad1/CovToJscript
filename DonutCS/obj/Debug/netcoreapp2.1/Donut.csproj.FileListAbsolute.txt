@@ -1,0 +1,8 @@
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\bin\Debug\netcoreapp2.1\Donut.deps.json
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\bin\Debug\netcoreapp2.1\Donut.runtimeconfig.json
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\bin\Debug\netcoreapp2.1\Donut.runtimeconfig.dev.json
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\bin\Debug\netcoreapp2.1\Donut.dll
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\bin\Debug\netcoreapp2.1\Donut.pdb
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\obj\Debug\netcoreapp2.1\Donut.csprojAssemblyReference.cache
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\obj\Debug\netcoreapp2.1\Donut.dll
+C:\Users\CyberNomad\Desktop\DevStuff\donutCS\obj\Debug\netcoreapp2.1\Donut.pdb

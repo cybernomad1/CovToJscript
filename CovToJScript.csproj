@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{342687ED-61F3-486A-B92C-219BC93AFD2C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CovToJScript</RootNamespace>
+    <AssemblyName>CovToJScript</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine, Version=2.8.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.2.8.0\lib\net461\CommandLine.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NDesk.Options, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PeNet, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PeNet.0.7.0\lib\net461\PeNet.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PeNet.Asn1, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PeNet.Asn1.1.2.0\lib\net461\PeNet.Asn1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Covenant\CovenantAPI.cs" />
+    <Compile Include="Covenant\Models.cs" />
+    <Compile Include="DonutCS\Constants.cs" />
+    <Compile Include="DonutCS\Debug.cs" />
+    <Compile Include="DonutCS\Donut.cs" />
+    <Compile Include="DonutCS\Generator.cs" />
+    <Compile Include="DonutCS\Helper.cs" />
+    <Compile Include="DonutCS\Payloads\payload_exe_x64.cs" />
+    <Compile Include="DonutCS\Payloads\payload_exe_x86.cs" />
+    <Compile Include="DonutCS\Structs\DonutConfig.cs" />
+    <Compile Include="DonutCS\Structs\DSConfig.cs" />
+    <Compile Include="DonutCS\Structs\DSCrypt.cs" />
+    <Compile Include="DonutCS\Structs\DSFileInfo.cs" />
+    <Compile Include="DonutCS\Structs\DShttp.cs" />
+    <Compile Include="DonutCS\Structs\DSInstance.cs" />
+    <Compile Include="DonutCS\Structs\DSModule.cs" />
+    <Compile Include="GadgetToJScript\GadgetToJscriptProgram.cs" />
+    <Compile Include="GadgetToJScript\TestAssemblyLoader.cs" />
+    <Compile Include="GadgetToJScript\_ASurrogateGadgetGenerator.cs" />
+    <Compile Include="GadgetToJScript\_DisableTypeCheckGadgetGenerator.cs" />
+    <Compile Include="GadgetToJScript\_SurrogateSelector.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DonutCS\obj\Debug\DonutCore.1.0.0.nuspec" />
+    <None Include="DonutCS\obj\Debug\netcoreapp2.1\Donut.assets.cache" />
+    <None Include="DonutCS\obj\Debug\netcoreapp2.1\Donut.csprojAssemblyReference.cache" />
+    <None Include="DonutCS\obj\Donut.csproj.nuget.cache" />
+    <None Include="DonutCS\obj\Donut.csproj.nuget.dgspec.json" />
+    <None Include="DonutCS\obj\Donut.csproj.nuget.g.props" />
+    <None Include="DonutCS\obj\Donut.csproj.nuget.g.targets" />
+    <None Include="DonutCS\obj\project.assets.json" />
+    <None Include="DonutCS\obj\Release\DonutCore.1.0.0.nuspec" />
+    <None Include="DonutCS\obj\Release\netcoreapp2.1\Donut.assets.cache" />
+    <None Include="DonutCS\obj\Release\netcoreapp2.1\Donut.csprojAssemblyReference.cache" />
+    <EmbeddedResource Include="GadgetToJScript\templates\htascript.template" />
+    <EmbeddedResource Include="GadgetToJScript\templates\jscript-regfree.template" />
+    <EmbeddedResource Include="GadgetToJScript\templates\jscript.template" />
+    <EmbeddedResource Include="GadgetToJScript\templates\payload.template" />
+    <EmbeddedResource Include="GadgetToJScript\templates\vbascriptb64.template" />
+    <EmbeddedResource Include="GadgetToJScript\templates\vbascripthex.template" />
+    <EmbeddedResource Include="GadgetToJScript\templates\vbscript.template" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DonutCS\obj\Debug\netcoreapp2.1\Donut.csproj.FileListAbsolute.txt" />
+    <Content Include="DonutCS\obj\Debug\netcoreapp2.1\Donut.dll" />
+    <Content Include="DonutCS\obj\Debug\netcoreapp2.1\Donut.pdb" />
+    <Content Include="DonutCS\obj\Release\netcoreapp2.1\Donut.csproj.FileListAbsolute.txt" />
+    <Content Include="DonutCS\obj\Release\netcoreapp2.1\Donut.dll" />
+    <Content Include="DonutCS\obj\Release\netcoreapp2.1\Donut.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
